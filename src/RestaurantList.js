@@ -28,7 +28,8 @@ function RestaurantList() {
           </section>
           <section className="nazwa_reszta">
             <p>{restaurant.city}, {restaurant.address}</p>
-            <p>Godziny otwarcia: {restaurant.openingTime.hour}:{restaurant.openingTime.minute} - {restaurant.closingTime.hour}:{restaurant.closingTime.minute}</p>
+            <p>{restaurant.phone}</p>
+            <p>Godziny otwarcia: {restaurant.openingHours}</p>
           </section>
         </a>
       ))}
