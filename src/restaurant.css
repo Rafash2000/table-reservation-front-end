@@ -1,0 +1,38 @@
+/* Stylizacja kontenera listy restauracji */
+.lista {
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: space-between; */
+    width: 800px; /* Ustaw szerokość na 400 pikseli */
+    height: 150px; /* Ustaw wysokość na 300 pikseli */
+    flex-direction: row;
+  }
+  
+  
+
+/* Stylizacja pojedynczej restauracji (linku) */
+.restauracja {
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-decoration: none; /* Usuń domyślne podkreślenie linku */
+    color: inherit; /* Dziedzicz kolor tekstu od rodzica */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Stylizacja nagłówka restauracji */
+  .nazwa_restauracja h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  /* Stylizacja informacji o restauracji */
+  .nazwa_reszta p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
