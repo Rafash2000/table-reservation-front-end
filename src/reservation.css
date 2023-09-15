@@ -1,0 +1,14 @@
+.data-frame {
+    /* Dodaj dowolne style dla przycisków */
+    padding: 8px 16px;
+    margin: 4px;
+    cursor: pointer;
+    border: none;
+    background-color: #eee;
+    outline: none;
+  }
+  
+  .selected {
+    background-color: #007bff;
+    color: white;
+  }

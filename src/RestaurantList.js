@@ -22,7 +22,7 @@ function RestaurantList() {
   return (
     <div className="lista">
       {restaurants.map((restaurant) => (
-        <a href={`restauracja/${restaurant.id}`} className="restauracja" key={restaurant.id}>
+        <a href={`restaurant/${restaurant.id}`} className="restauracja" key={restaurant.id}>
           <section className="nazwa_restauracja">
             <h4>{restaurant.name}</h4>
           </section>

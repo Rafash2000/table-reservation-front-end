@@ -1,22 +1,51 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import axios from 'axios';
+import './reservation.css'; 
+
 
 function Reservation() {
   const [selectedDate, setSelectedDate] = useState(new Date());
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   const [selectedSeats, setSelectedSeats] = useState(2);
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [selectedTime, setSelectedTime] = useState(null);
+  const [isReservationEnabled, setReservationEnabled] = useState(false);
+  const [email, setEmail] = useState('');
+
+  useEffect(() => {
+    fetchData(selectedDate, selectedSeats);
+  }, [selectedDate, selectedSeats]);
+
+  useEffect(() => {
+    if (
+      selectedDate &&
+      selectedTime &&
+      phoneNumber.trim() !== '' &&
+      email.trim() !== ''
+    ) {
+      setReservationEnabled(true);
+    } else {
+      setReservationEnabled(false);
+    }
+  }, [selectedDate, selectedTime, phoneNumber, email]);
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
-    fetchData(date, selectedSeats); // Aktualizujemy również ilość miejsc w żądaniu GET
   };
 
   const handleSeatsChange = (event) => {
     const selectedSeatsValue = parseInt(event.target.value, 10);
     setSelectedSeats(selectedSeatsValue);
-    fetchData(selectedDate, selectedSeatsValue);
+  };
+
+  const handlePhoneNumberChange = (event) => {
+    setPhoneNumber(event.target.value);
+  };
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
   };
 
   const formatDateToYYYYMMDD = (date) => {
@@ -35,6 +64,42 @@ function Reservation() {
       console.error('Błąd podczas pobierania danych:', error);
     }
   };
+
+  const handleTimeClick = (time) => {
+    setSelectedTime(time);
+  };
+
+  const handleReservation = async () => {
+    try {
+      const pathArray = window.location.pathname.split('/');
+      const restaurantId = parseInt(pathArray[pathArray.length - 1], 10);
+  
+      const formattedDate = formatDateToYYYYMMDD(selectedDate);
+      const dateTime = `${formattedDate}T${selectedTime}`;
+  
+      const reservationData = {
+        restaurantId: restaurantId,
+        numberOfPeople: selectedSeats,
+        dateTime: dateTime,
+        phone: phoneNumber,
+        email: email
+      };
+  
+      const response = await axios.post(
+        'http://localhost:8081/reservations/addReservation',
+        reservationData
+      );
+      setPhoneNumber('');
+      setEmail('');
+      fetchData(selectedDate, selectedSeats);
+  
+      alert('Rezerwacja dokonana pomyślnie!');
+    } catch (error) {
+      console.error('Błąd podczas rezerwacji:', error);
+      alert('Wystąpił błąd podczas rezerwacji.');
+    }
+  };
+  
 
   return (
     <div className="App">
@@ -56,12 +121,33 @@ function Reservation() {
           <option value={6}>6</option>
         </select>
       </label>
-      {data && (
+      {data.length > 0 && (
         <div>
           <h2>Dane dla wybranej daty:</h2>
-          <pre>{JSON.stringify(data, null, 2)}</pre>
+          {data.map((item, index) => (
+            <button
+              key={index}
+              className={`data-frame ${selectedTime === item.time ? 'selected' : ''}`}
+              onClick={() => handleTimeClick(item.time)}
+            >
+              {item.time}
+            </button>
+          ))}
         </div>
       )}
+      <div className="user-info">
+        <label>
+          Numer telefonu:
+          <input type="tel" value={phoneNumber} onChange={handlePhoneNumberChange} />
+        </label>
+        <label>
+          Adres e-mail: {/* Nowe pole na adres e-mail */}
+          <input type="email" value={email} onChange={handleEmailChange} />
+        </label>
+      </div>
+      <button onClick={handleReservation} disabled={!isReservationEnabled}>
+        Rezerwuj
+      </button>
     </div>
   );
 }
