@@ -1,0 +1,25 @@
+.form-input {
+    background-color: #ffdf60;
+    width: 300px; /* Szerokość na całą dostępną przestrzeń */
+    height: 40px;
+    margin-bottom: 10px; /* Odstęp między elementami */
+    padding: 10px; /* Dodatkowe wypełnienie dla lepszego wyglądu */
+  }
+  
+.form-button {
+    width: 320px; /* Szerokość na całą dostępną przestrzeń */
+    height: 50px;
+    padding: 10px; /* Dodatkowe wypełnienie dla lepszego wyglądu */
+  }
+  
+
+  
+.centered-container {
+    
+    width: 340px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f3c200;
+    
+  
+  }

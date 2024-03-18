@@ -1,0 +1,159 @@
+/* General Styling for the Reservation Container */
+.reservation-container {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f3c200;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  
+}
+
+h1, h2, p {
+  color: #333;
+}
+
+/* Calendar Container */
+.calendar-container {
+  background-color: #ffe942;
+ 
+  padding-left: 1px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Date and Seats Selection */
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid black;
+  margin-top: 5px;
+}
+
+/* Time Frame Buttons */
+.time-frame {
+  padding: 8px 16px;
+  margin: 4px;
+  cursor: pointer;
+  border: none;
+  background-color: #dfb409;
+  outline: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+.time-frame:hover {
+  background-color: #d6a900;
+  color: black;
+}
+
+.selected {
+  background-color: #d6a900;
+  color: black;
+}
+
+/* Login Form and User Greeting */
+.login-form, .user-greeting {
+  margin-bottom: 20px;
+}
+
+/* Reservation Button */
+button {
+  background-color: #28a745;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+button:disabled {
+  background-color: #cda945;
+  cursor: default;
+}
+
+/* Reservation Confirmation Message */
+.reservation-confirmation {
+  padding: 10px;
+  background-color: #cda945;
+  border: 1px solid #cda945;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+*{
+  background-color: #f3c200;
+}
+
+.react-calendar__tile--active {
+  background: black !important; /* Twoja własna kolor tła */
+  color: black !important; /* Twój własny kolor tekstu */
+}
+
+.react-calendar__navigation {
+ 
+  margin-bottom: 0em !important;
+}
+
+.reservation-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Aligns children vertically at the center */
+    align-items: center; /* Aligns children horizontally at the center */
+    /* Other styles remain the same */
+    /* ... */
+}
+
+/* Styling for the individual components inside the container */
+p, label, .time-frame, button {
+    margin-bottom: 10px; /* Adds spacing between elements */
+    text-align: center; /* Centers text inside each element */
+    width: 100%; /* Optional: makes each element take full width of the container */
+}
+
+/* If you have a form, you might want to apply specific styles */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Adjust width as needed */
+}
+
+
+#email {
+  width: 99%;
+}
+
+#password{
+  width: 99%;
+}
+
+button{
+  margin-top: 10px;
+  width: 300px;
+}
+
+h2{
+  border: 1px black solid;
+  border-radius: 5px;
+}
+
+.form-login {
+  background-color: #ffdf60;
+  width: 250px; /* Szerokość na całą dostępną przestrzeń */
+  height: 20px;
+  margin-bottom: 10px; /* Odstęp między elementami */
+  padding: 10px; /* Dodatkowe wypełnienie dla lepszego wyglądu */
+}

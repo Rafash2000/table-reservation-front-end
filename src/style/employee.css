@@ -1,0 +1,59 @@
+/* LoginForm.css (lub odpowiedni plik CSS dla LoginForm) */
+
+.reservation-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .login-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .login-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .login-form input {
+    background-color: #ffdf60;
+    width: 300px; /* Szerokość na całą dostępną przestrzeń */
+    height: 40px;
+    margin-bottom: 10px; /* Odstęp między elementami */
+    padding: 10px; /* Dodatkowe wypełnienie dla lepszego wyglądu */
+    
+  }
+  .form-button {
+    width: 320px; /* Szerokość na całą dostępną przestrzeń */
+    height: 50px;
+    padding: 10px; /* Dodatkowe wypełnienie dla lepszego wyglądu */
+  }
+  .login-form-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px; /* Możesz dostosować tę wartość */
+    padding: 20px; /* Dodaje trochę przestrzeni wokół zawartości */
+  }
+  
+  /* Styl dla formularza, przycisków i innych elementów */
+  .login-form,
+  .reservation-buttons,
+  .reservations-list,
+  .table-create-form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .table-form {
+    background-color: #ffdf60;
+    width: 150px; /* Szerokość na całą dostępną przestrzeń */
+    height: 10px;
+    margin-bottom: 5px; /* Odstęp między elementami */
+    padding: 5px; /* Dodatkowe wypełnienie dla lepszego wyglądu */
+    
+  }
+  
+  

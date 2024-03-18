@@ -1,0 +1,32 @@
+.admin-login {
+    background-color: #ffdf60;
+    width: 200px; /* Szerokość na całą dostępną przestrzeń */
+    height: 10px;
+    margin-bottom: 10px; /* Odstęp między elementami */
+    padding: 10px; /* Dodatkowe wypełnienie dla lepszego wyglądu */
+  }
+
+  .login-form input {
+    background-color: #ffdf60;
+    width: 300px; /* Szerokość na całą dostępną przestrzeń */
+    height: 40px;
+    margin-bottom: 10px; /* Odstęp między elementami */
+    padding: 10px; /* Dodatkowe wypełnienie dla lepszego wyglądu */
+    
+  }
+
+  nav {
+    width: 100%; /* Zapewnia, że <nav> zajmuje całą szerokość */
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: space-between; /* Rozkłada elementy równomiernie */
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Usuwa domyślne marginesy */
+    width: 100%; /* Zapewnia, że <ul> zajmuje całą szerokość */
+  }
+  
+
+  

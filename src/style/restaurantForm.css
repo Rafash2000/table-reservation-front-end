@@ -1,0 +1,11 @@
+.restaurant-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.restaurant-box:hover {
+    background-color: #ffdc32;
+}

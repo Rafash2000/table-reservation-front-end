@@ -1,0 +1,80 @@
+/* Stylizacja kontenera listy restauracji */
+.lista {
+  display: flex;
+  flex-wrap: wrap;
+  /*justify-content: space-between; */
+  width: 1200px; /* Ustaw szerokość na 400 pikseli */
+  height: 150px; /* Ustaw wysokość na 300 pikseli */
+  flex-direction: row;
+}
+
+
+
+/* Stylizacja pojedynczej restauracji (linku) */
+.restauracja {
+  width: 80%;
+  border: 1px solid #ba9d55;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  text-decoration: none; /* Usuń domyślne podkreślenie linku */
+  color: inherit; /* Dziedzicz kolor tekstu od rodzica */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffe942;
+}
+.restauracja * {
+  background-color: #ffe942;
+}
+
+
+/* Stylizacja nagłówka restauracji */
+.nazwa_restauracja h4 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+/* Stylizacja informacji o restauracji */
+.nazwa_reszta p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between; /* Rozmieszcza elementy na obu końcach kontenera */
+}
+
+.restaurant-list {
+  flex: 1; /* Zajmuje dostępną przestrzeń */
+}
+
+/* Dodatkowe style dla LoginForm można dodać tutaj lub w jego własnym pliku CSS */
+
+*{
+margin: 0;
+padding: 0;
+background-color: #ffdc32;
+}
+
+.restaurant-column{
+padding: 1em;
+background-color: #f3c200;
+}
+
+h1{
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  height: 60px; 
+}
+
+
+tytul{
+  height: 60px;
+  display: flex;
+  
+}
