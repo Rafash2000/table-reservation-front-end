@@ -5,8 +5,8 @@ import EditRestaurantForm from './EditRestaurantForm';
 import DeleteRestaurantForm from './DeleteRestaurantForm';
 import AddEmployeeForm from './AddEmployeeForm';
 import DeleteUserForm from './DeleteUserForm';
-import './style/restaurantForm.css';
-import './style/admin.css';
+import './/style/restaurantForm.css';
+import './/style/admin.css';
 
 function AdminPanel() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);

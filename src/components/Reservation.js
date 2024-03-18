@@ -3,7 +3,7 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import './style/reservation.css';
+import './/style/reservation.css';
 import LoginForm from './LoginForm';
 
 function Reservation() {

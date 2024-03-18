@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './style/editRestaurant.css';
+import './/style/editRestaurant.css';
 
 
 function EditRestaurantForm() {

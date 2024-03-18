@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom'; // Dodane Link
-import './style/reservation.css';
+import './/style/reservation.css';
 
 function LoginForm({ onLoginSuccess }) {
     const [email, setEmail] = useState('');

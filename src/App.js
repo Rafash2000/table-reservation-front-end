@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router,  Route, BrowserRouter, Routes } from 'react-router-dom';
-import Home from './Home';
-import Reservation from './Reservation';
-import Employee from './Employee';
-import RegisterForm from './RegisterForm'; 
-import AdminPanel from './AdminPanel';
+import Home from './components/Home';
+import Reservation from './components/Reservation';
+import Employee from './components/Employee';
+import RegisterForm from './components/RegisterForm'; 
+import AdminPanel from './components/AdminPanel';
 
 
 

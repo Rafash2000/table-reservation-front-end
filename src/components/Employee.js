@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './style/employee.css';
+import './/style/employee.css';
 
 function Employee() {
   const [email, setEmail] = useState('');
